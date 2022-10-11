@@ -7,14 +7,14 @@ const Statistics = () => {
   const quizData = quizDataObj.data;
 
   return (
-    <ResponsiveContainer width="100%" height={300}>
+    <ResponsiveContainer width="90%" height={300}>
       <LineChart
         width={350}
         height={300}
         data={quizData}
         margin={{
           top: 60,
-          right: 20,
+          right: 10,
           left: 20,
           bottom: 5,
         }}
