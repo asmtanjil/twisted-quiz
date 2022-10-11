@@ -7,18 +7,27 @@ const Statistics = () => {
   const quizData = quizDataObj.data;
 
   return (
-    <div>
-      <h2>Statistics</h2>
-      <ResponsiveContainer width={500} height={400}>
-        <LineChart width={500} height={400} data={quizData}>
-          <Line type="monotone" dataKey="name" stroke="#82ca9d" />
-          <Line type="monotone" dataKey="total" stroke="#8884d8" activeDot={{ r: 8 }} />
-          <XAxis dataKey="name" />
-          <YAxis />
-          <Tooltip />
-        </LineChart>
-      </ResponsiveContainer>
-    </div>
+    <ResponsiveContainer width="100%" height={300}>
+      <LineChart
+        width={350}
+        height={300}
+        data={quizData}
+        margin={{
+          top: 60,
+          right: 20,
+          left: 20,
+          bottom: 5,
+        }}
+      >
+        <CartesianGrid strokeDasharray="3 3" />
+        <XAxis dataKey="name" />
+        <YAxis />
+        <Tooltip />
+        <Legend />
+        <Line type="monotone" dataKey="total" stroke="#8884d8" activeDot={{ r: 8 }} />
+        <Line type="monotone" dataKey="name" stroke="#82ca9d" />
+      </LineChart>
+    </ResponsiveContainer>
   );
 };
 
