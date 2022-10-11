@@ -50,7 +50,13 @@ const Topics = () => {
   return (
     <div>
       <h2>Topics</h2>
-
+      <LineChart width={500} height={400} data={data}>
+        <Line type="monotone" dataKey="marks" stroke="#82ca9d" />
+        <Line type="monotone" dataKey="quiz" stroke="#8884d8" activeDot={{ r: 8 }} />
+        <XAxis dataKey="name" />
+        <YAxis />
+        <Tooltip />
+      </LineChart>
     </div>
 
   );

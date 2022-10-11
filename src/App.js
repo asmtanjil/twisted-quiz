@@ -28,6 +28,10 @@ function App() {
 
         },
         {
+          path: "/topics",
+          element: <Topics></Topics>
+        },
+        {
           path: "/statistics",
           element: <Statistics></Statistics>
         },
