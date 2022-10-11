@@ -5,7 +5,6 @@ const QuizTopic = ({ quizTopic }) => {
   const { id, name, logo } = quizTopic;
   // console.log(quizTopic);
 
-
   const navigate = useNavigate()
   const HandleAddToDetails = () => {
     navigate(`/quizTopic/${id}`)

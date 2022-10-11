@@ -7,6 +7,7 @@ import Topics from './Components/Topics/Topics';
 import Statistics from './Components/Statistics/Statistics';
 import Blog from './Components/Blog/Blog';
 import Quiz from './Components/Quiz/Quiz';
+import Error from './Components/Error/Error';
 
 function App() {
   const router = createBrowserRouter([
@@ -43,10 +44,7 @@ function App() {
     },
     {
       path: "*",
-      element: <div className='text-4xl mt-10 mx-5 py-4 bg-blue-200 rounded-md'>
-        <h2>Can't Access this Router</h2>
-        <h2>404</h2>
-      </div>
+      element: <Error></Error>
     }
   ])
   return (
