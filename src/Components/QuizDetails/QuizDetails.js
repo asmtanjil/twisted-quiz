@@ -1,10 +1,12 @@
 import React from 'react';
 import Option from '../Option/Option';
 import { EyeIcon } from '@heroicons/react/24/solid';
+import { toast } from 'react-toastify';
 
 const QuizDetails = ({ detail, notify }) => {
   const { question, options } = detail;
   // console.log(detail);
+  const notifyAnswer = () => toast("Wow so easy!");
 
   return (
     <div className='my-12 mx-8 md:mx-48 p-2 bg-blue-200 rounded-xl'>
@@ -23,7 +25,7 @@ const QuizDetails = ({ detail, notify }) => {
           options.map((option, idx) => <Option
             key={idx}
             option={option}
-            notify={notify}
+            notifyAnswer={notifyAnswer}
           ></Option>)
         }
       </div>

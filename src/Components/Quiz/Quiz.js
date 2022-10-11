@@ -1,8 +1,7 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import QuizDetails from '../QuizDetails/QuizDetails';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 
 const Quiz = () => {
   const quizDetails = useLoaderData()
@@ -22,7 +21,6 @@ const Quiz = () => {
           notify={notify}
         ></QuizDetails>)
       }
-      <ToastContainer />
     </div>
   );
 };
