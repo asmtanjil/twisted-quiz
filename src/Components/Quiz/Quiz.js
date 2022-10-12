@@ -1,6 +1,5 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
-import { toast } from 'react-toastify';
 import QuizDetails from '../QuizDetails/QuizDetails';
 
 const Quiz = () => {
@@ -8,8 +7,7 @@ const Quiz = () => {
   const details = quizDetails.data.questions;
   const quizTopic = quizDetails.data;
   // console.log(quizDetails);
-
-  const notify = () => toast("Wow so easy!");
+  console.log(details);
 
   return (
     <div>
@@ -18,10 +16,10 @@ const Quiz = () => {
         details.map(detail => <QuizDetails
           key={detail.id}
           detail={detail}
-          notify={notify}
         ></QuizDetails>)
       }
     </div>
+
   );
 };
 
