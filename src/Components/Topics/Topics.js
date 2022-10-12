@@ -3,7 +3,7 @@ import { DataContext } from '../../Layouts/Main';
 import QuizTopic from '../QuizTopic/QuizTopic';
 
 const Topics = () => {
-  const quizData = useContext(DataContext)
+  const quizData = useContext(DataContext);
   const data = quizData.data;
   // console.log(data)
   return (

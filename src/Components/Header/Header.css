@@ -1,0 +1,12 @@
+.active{
+  background-color: lightcoral;
+  color: black;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+.activeButton:hover{
+  background-color: cadetblue;
+  color: black;
+  padding: 4px 8px;
+  border-radius: 4px;
+}

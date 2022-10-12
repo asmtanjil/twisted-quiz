@@ -10,7 +10,7 @@ const QuizDetails = ({ detail }) => {
   return (
     <div className='my-12 mx-8 md:mx-48 p-2 bg-blue-200 rounded-xl'>
       <div className='flex justify-between'>
-        <h2 className='my-8 text-2xl font-semibold'>Question: {question}</h2>
+        <h2 className='my-8 text-2xl font-semibold'>Quiz: {question}</h2>
         <div>
           <button onClick={() => toast(correctAnswer)}>
             <EyeIcon className="h-6 w-6 text-blue-500" />

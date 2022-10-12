@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
+import './Header.css'
 
 const Header = () => {
   return (
@@ -10,10 +11,18 @@ const Header = () => {
       </div>
 
       <div>
-        <Link className='mr-8 text-xl md:text-2xl font-semibold' to="/">Home</Link>
-        <Link className='mr-8 text-xl md:text-2xl font-semibold' to="/topics">Topics</Link>
-        <Link className='mr-8 text-xl md:text-2xl font-semibold' to="/statistics">Statistics</Link>
-        <Link className='mr-8 text-xl md:text-2xl font-semibold' to="/blog">Blog</Link>
+        <NavLink className={`mr-8 text-xl md:text-2xl font-semibold activeButton ${({
+          isActive,
+        }) => (isActive ? "active" : undefined)}`} to="/home">Home</NavLink>
+        <NavLink className={`mr-8 text-xl md:text-2xl font-semibold activeButton ${({
+          isActive,
+        }) => (isActive ? "active" : undefined)}`} to="/topics">Topics</NavLink>
+        <NavLink className={`mr-8 text-xl md:text-2xl font-semibold activeButton ${({
+          isActive,
+        }) => (isActive ? "active" : undefined)}`} to="/statistics">Statistics</NavLink>
+        <NavLink className={`mr-8 text-xl md:text-2xl font-semibold activeButton ${({
+          isActive,
+        }) => (isActive ? "active" : undefined)}`} to="/blog">Blog</NavLink>
       </div>
 
     </div>
